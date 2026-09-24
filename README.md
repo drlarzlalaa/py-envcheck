@@ -7,10 +7,10 @@ Lint `.env` files and compare them with a template (`.env.example`), offline. St
 ```
 $ python -m envcheck tests/data/messy.env --template tests/data/example.env
 tests/data/messy.env: 11 variables, 18 findings
+  error [missing] SMTP_URL is in the template (line 6) but not in the .env file
   warn  line 3 [spaces] space before '=' after 'DB_HOST'; some loaders reject or keep it in the key
   warn  line 4 [placeholder] DB_PASSWORD still looks like a placeholder value
   info  line 5 [empty] API_KEY is empty
-  error [missing] SMTP_URL is in the template (line 6) but not in the .env file
   warn  line 7 [duplicate] DEBUG is defined again (first on line 6); the last one usually wins
   error line 11 [syntax] no '=' in this line (expected KEY=value)
   error line 12 [key] '2FAST' is not a valid variable name (letters, digits and _, not starting with a digit)
