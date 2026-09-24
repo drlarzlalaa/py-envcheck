@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envcheck"
+version = "0.1.0"
+description = "Lint .env files offline and compare them with .env.example: syntax, duplicates, quoting, missing and extra keys, placeholder values"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "drlarzlalaa" }]
+keywords = ["dotenv", "env", "lint", "configuration"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.scripts]
+envcheck = "envcheck.__main__:main"
+
+[tool.setuptools]
+packages = ["envcheck"]
